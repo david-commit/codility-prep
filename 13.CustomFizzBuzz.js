@@ -21,19 +21,19 @@
 // fizzBuzzCustom("What's ", "up?", 3, 7)[80] // returns "What's " (81 is divisible by 3)
 
 const fizzBuzzCustom = function (s1 = 'Fizz', s2 = 'Buzz', n1 = 3, n2 = 5) {
- const array = []
- for (let i = 1; i <= 100; i++) {
+  const array = [];
+  for (let i = 1; i <= 100; i++) {
     if (i % n1 == 0 && i % n2 == 0) {
-     array.push(s1 + s2)
+      array.push(s1 + s2);
     } else if (i % n1 == 0) {
-     array.push(s1)
+      array.push(s1);
     } else if (i % n2 == 0) {
-     array.push(s2)
+      array.push(s2);
     } else {
-     array.push(i)
+      array.push(i);
     }
- }
- return array
+  }
+  return array;
 };
 
 console.log(fizzBuzzCustom('Hello', 'World', 2, 10));

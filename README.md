@@ -12,3 +12,4 @@
 10. Max Water Container
 11. COunting Characters in string
 12. Responsible Drinking
+13. Custom FizzBuzz
