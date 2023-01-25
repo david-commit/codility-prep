@@ -5,3 +5,5 @@
 3. TwoSum
 4. Character Appearance
 5. FizzBuzz
+6. ChunkedArray
+7. UniqueCharacters
