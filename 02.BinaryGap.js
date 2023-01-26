@@ -19,24 +19,46 @@
 // N is an integer within the range [1..2,147,483,647].
 
 // ==== SOLUTION
-function binaryGap(number) {
-  const binaryArr = number.toString(2).split('');
-  const zeroArr = [];
-  console.log(binaryArr);
-  console.log(zeroArr);
+// function binaryGap(number) {
+//   const binaryArr = number.toString(2).split('');
+//   const zeroArr = [];
+//   console.log(binaryArr);
+//   console.log(zeroArr);
 
-  binaryArr.map((i) => {
-    if (i == 0) {
-      zeroArr.push(binaryArr[i]);
+//   binaryArr.map((i) => {
+//     if (i == 0) {
+//       zeroArr.push(binaryArr[i]);
+//     }
+//   });
+//   if (zeroArr.length > 0) {
+//     console.log('BinaryGap: ' + zeroArr.length);
+//   } else {
+//     console.log('BinaryGap: ' + 0);
+//   }
+// }
+
+// binaryGap(3);
+// Does not yet get the highest gap, it gets a count of all zeros
+
+function binaryGap(N) {
+  let binaryValue = (N).toString(2);
+  console.log(binaryValue)
+  let lengthArr = [];
+  let length = 1;
+
+  for (let i = 0; i < binaryValue.length; i++) {
+    if (binaryValue[i] == 0) {
+      // Check if 1 is ending then push the lenght to array and reset the length
+      if (binaryValue[i + 1] == 1) {
+        lengthArr.push(length);
+        length = 0;
+      }
+
+      length++;
     }
-  });
-  if (zeroArr.length > 0) {
-    console.log('BinaryGap: ' + zeroArr.length);
-  } else {
-    console.log('BinaryGap: ' + 0);
   }
+
+  return lengthArr.length ? Math.max(...lengthArr) : 0;
 }
 
-binaryGap(3);
-
-// Does not yet get the highest gap, it gets a count of all zeros
+console.log(binaryGap(529))

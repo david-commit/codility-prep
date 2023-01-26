@@ -41,6 +41,4 @@ const LikeButton = () => {
   );
 };
 
-console.log(LikeButton())
-
 export default LikeButton;
