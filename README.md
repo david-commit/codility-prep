@@ -14,3 +14,7 @@
 12. Responsible Drinking
 13. Custom FizzBuzz
 14. ReactLikeButton
+15. Maximum value divisible by 4
+16. Matching Index
+17. Smallest postitve integer
+18. Symetric Charachters
